@@ -1,0 +1,43 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Japan Util'
+      'submenu': [
+        {
+          'label': 'Hiragana'
+          'command': 'japan-util:hiragana'
+        }
+        {
+          'label': 'Katakana'
+          'command': 'japan-util:katakana'
+        }
+        {
+          'label': 'Katakana Hankaku'
+          'command': 'japan-util:katakana-hankaku'
+        }
+        {
+          'label': 'Hankaku'
+          'command': 'japan-util:hankaku'
+        }
+        {
+          'label': 'Hankaku Only Ascii'
+          'command': 'japan-util:hankaku-only-ascii'
+        }
+        {
+          'label': 'Hankaku Only Katakana'
+          'command': 'japan-util:hankaku-only-katakana'
+        }
+        {
+          'label': 'Zenkaku'
+          'command': 'japan-util:zenkaku'
+        }
+        {
+          'label': 'Zenkaku Only Katakana'
+          'command': 'japan-util:zenkaku-only-katakana'
+        }
+      ]
+    ]
+  }
+]

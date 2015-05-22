@@ -1,0 +1,33 @@
+{
+  "name": "japan-util",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "utilities for Japanese",
+  "keywords": [
+    "japanese",
+    "zenkaku",
+    "hankaku",
+    "hiragana",
+    "katakana"
+  ],
+  "activationCommands": {
+    "atom-text-editor": [
+      "japan-util:hiragana",
+      "japan-util:katakana",
+      "japan-util:katakana-hankaku",
+      "japan-util:hankaku",
+      "japan-util:hankaku-only-ascii",
+      "japan-util:hankaku-only-katakana",
+      "japan-util:zenkaku",
+      "japan-util:zenkaku-only-katakana"
+    ]
+  },
+  "repository": "https://github.com/aki77/atom-japan-util",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+    "moji": ">=0.3.1"
+  }
+}
