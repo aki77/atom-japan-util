@@ -1,6 +1,7 @@
 # japan-util package
 
 Utilities for Japanese.
+[![Build Status](https://travis-ci.org/aki77/atom-japan-util.svg?branch=master)](https://travis-ci.org/aki77/atom-japan-util)
 
 ![](http://i.gyazo.com/f1d6bb0a1cbfa79e35b9368fc1a893dc.gif)
 
