@@ -6,11 +6,11 @@ module.exports =
 
   commands:
     'hiragana':              [['HK', 'ZK'], ['KK', 'HG']]
-    'katakana':              ['HG', 'KK']
+    'katakana':              [['HG', 'KK']]
     'katakana-hankaku':      [['HG', 'KK'], ['ZK', 'HK']]
     'hankaku':               [['ZE', 'HE'], ['ZS', 'HS'], ['HG', 'KK'], ['ZK', 'HK']]
     'hankaku-only-ascii':    [['ZE', 'HE'], ['ZS', 'HS']]
-    'hankaku-only-katakana': ['ZK', 'HK']
+    'hankaku-only-katakana': [['ZK', 'HK']]
     'zenkaku':               [['HE', 'ZE'], ['HS', 'ZS'], ['HK', 'ZK']]
     'zenkaku-only-katakana': [['HK', 'ZK']]
 
@@ -24,12 +24,14 @@ module.exports =
     @subscriptions?.dispose()
     @subscriptions = null
 
-  convert: (args) ->
+  convert: (argsArray) ->
     editor = atom.workspace.getActiveTextEditor()
     return unless editor?
     selectedText = editor.getSelectedText()
     return unless selectedText.length > 0
     Moji = require 'moji' unless Moji?
     moji = new Moji(selectedText)
-    convertedText = moji.convert.apply(moji, args).toString()
-    editor.insertText(convertedText)
+    argsArray.forEach((args) ->
+      moji.convert.apply(moji, args)
+    )
+    editor.insertText(moji.toString())

@@ -1,3 +1,7 @@
+## 0.2.0
+* moji@0.5.1
+* Fixed #1
+
 ## 0.1.1
 * Rewrite lazy-loaded
 
